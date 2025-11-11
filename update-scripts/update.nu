@@ -22,7 +22,7 @@ export def generate_sources []: nothing -> record {
   let x86_hash = (get_nix_hash $x86_64_url)
   let aarch64_hash = (get_nix_hash $aarch64_url)
 
-  if $tag == $prev_sources.version && $prev_sources.x86_64-linux.hash == $x86_hash && $prev_sources.aarch64-linux.hash == $aarch64_hash {
+  if $tag == $prev_sources.version and $prev_sources.x86_64-linux.hash == $x86_hash and $prev_sources.aarch64-linux.hash == $aarch64_hash {
 	# everything up to date
 	return {
 	  prev_tag: $tag
